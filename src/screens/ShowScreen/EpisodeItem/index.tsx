@@ -1,7 +1,7 @@
 import { Text } from '@common/design-system/Text'
 import { Colors } from '@common/resources/Colors'
 import { Episode } from '@common/types'
-import { HomeStackParamsList } from '@navigation/HomeNavigator'
+import { HomeStackParamsList } from '@navigation/TabNavigator/HomeNavigator'
 import { NavigationProp, useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { StyleSheet } from 'react-native'

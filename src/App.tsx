@@ -3,17 +3,12 @@ import { NavigationContainer } from '@react-navigation/native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { StatusBar, StyleSheet } from 'react-native'
-import RNBootSplash from 'react-native-bootsplash'
 import { RootNavigator } from '@navigation/RootNavigator'
 import { Colors } from '@common/resources/Colors'
 
 const App: React.FC = () => {
-  const handleNavigationReady = () => {
-    RNBootSplash.hide()
-  }
-
   return (
-    <NavigationContainer onReady={handleNavigationReady}>
+    <NavigationContainer>
       <SafeAreaProvider>
         <GestureHandlerRootView style={styles.gestureHandler}>
           <StatusBar

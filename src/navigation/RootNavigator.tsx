@@ -1,59 +1,32 @@
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { HomeStack } from '@navigation/HomeNavigator'
-import { Icons } from '@common/resources/Icons'
-import { FavoritesStack } from '@navigation/FavoritesNavigator'
-import { SearchStack } from '@navigation/SearchNavigator'
-import { FavoritesContext } from '@common/contexts/favoritesContext'
+import React, { useEffect } from 'react'
+import { TabNavigator, TabNavigatorParamsList } from '@navigation/TabNavigator'
+import { NoInternetScreen } from '@screens/NoInternetScreen'
+import { InternetStatusContext } from '@common/contexts/InternetStatusContext'
+import { NavigatorScreenParams } from '@react-navigation/core'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import RNBootSplash from 'react-native-bootsplash'
 
-type RootTabParamsList = {
-  HomeStack: undefined
-  FavoritesStack: undefined
-  SearchStack: undefined
+export type RootParamsList = {
+  TabNavigator: NavigatorScreenParams<TabNavigatorParamsList>
+  NoInternet: undefined
 }
 
-const Tab = createBottomTabNavigator<RootTabParamsList>()
+const Stack = createNativeStackNavigator<RootParamsList>()
 
 export const RootNavigator: React.FC = () => {
+  useEffect(() => {
+    RNBootSplash.hide()
+  }, [])
+
   return (
-    <FavoritesContext.Provider>
-      <Tab.Navigator
-        initialRouteName="HomeStack"
+    <InternetStatusContext.Provider>
+      <Stack.Navigator
+        initialRouteName="TabNavigator"
         screenOptions={{ headerShown: false }}
       >
-        <Tab.Screen
-          name="HomeStack"
-          component={HomeStack}
-          options={{
-            tabBarIcon: ({ color }) => {
-              return <Icons.Home stroke={color} />
-            },
-            tabBarShowLabel: false,
-          }}
-        />
-
-        <Tab.Screen
-          name="FavoritesStack"
-          component={FavoritesStack}
-          options={{
-            tabBarIcon: ({ color }) => {
-              return <Icons.Favorites fill={color} />
-            },
-            tabBarShowLabel: false,
-          }}
-        />
-
-        <Tab.Screen
-          name="SearchStack"
-          component={SearchStack}
-          options={{
-            tabBarIcon: ({ color }) => {
-              return <Icons.Search stroke={color} />
-            },
-            tabBarShowLabel: false,
-          }}
-        />
-      </Tab.Navigator>
-    </FavoritesContext.Provider>
+        <Stack.Screen name="TabNavigator" component={TabNavigator} />
+        <Stack.Screen name="NoInternet" component={NoInternetScreen} />
+      </Stack.Navigator>
+    </InternetStatusContext.Provider>
   )
 }

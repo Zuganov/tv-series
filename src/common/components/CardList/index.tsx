@@ -1,7 +1,7 @@
 import { CardShow } from '@common/components/CardList/CardShow'
 import { Colors } from '@common/resources/Colors'
 import { Show } from '@common/types'
-import { HomeStackParamsList } from '@navigation/HomeNavigator'
+import { HomeStackParamsList } from '@navigation/TabNavigator/HomeNavigator'
 import { NavigationProp, useNavigation } from '@react-navigation/core'
 import React, { useCallback } from 'react'
 import {

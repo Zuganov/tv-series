@@ -1,5 +1,5 @@
 import { Summary } from '@common/components/Summary'
-import { FavoritesContext } from '@common/contexts/favoritesContext'
+import { FavoritesContext } from '@common/contexts/FavoritesContext'
 import { Button } from '@common/design-system/Button'
 import { Image } from '@common/design-system/Image'
 import { Text } from '@common/design-system/Text'
