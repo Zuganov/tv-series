@@ -3,15 +3,15 @@ import { EmptyListComponent } from '@screens/SearchScreen/EmptyListComponent'
 import { ErrorState } from '@common/components/ErrorState'
 import { fetchHelper } from '@common/helpers/FetchHelper'
 import { Colors } from '@common/resources/Colors'
-import { Config } from '@common/resources/Config'
 import { Show } from '@common/types'
-import { SearchStackParamsList } from '@navigation/SearchNavigator'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { SearchContext } from '@screens/SearchScreen/SeachContext'
 import { SearchInput } from '@screens/SearchScreen/SearchInput'
 import React, { useEffect, useState } from 'react'
 import { StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import Config from 'react-native-config'
+import { SearchStackParamsList } from '@navigation/TabNavigator/SearchNavigator'
 
 type SearchScreenProps = NativeStackScreenProps<SearchStackParamsList, 'Search'>
 type ShowSearchResponse = { score: number; show: Show }

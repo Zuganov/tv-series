@@ -1,6 +1,5 @@
 import { Text } from '@common/design-system/Text'
 import { fetchHelper } from '@common/helpers/FetchHelper'
-import { Config } from '@common/resources/Config'
 import { Show } from '@common/types'
 import { HomeStackParamsList } from '@navigation/TabNavigator/HomeNavigator'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
@@ -8,6 +7,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { StyleSheet } from 'react-native'
 import { CardList } from '@common/components/CardList'
 import { ErrorState } from '@common/components/ErrorState'
+import Config from 'react-native-config'
 
 type HomeScreenProps = NativeStackScreenProps<HomeStackParamsList, 'Home'>
 
