@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react-native'
-import { SearchScreen } from '@screens/SearchScreen'
+import { SearchScreen } from '@screens/Search'
 import { MockedNavigation, navigationMock } from '../../../jest/helper'
 import { CardShow } from '@common/components/CardList/CardShow'
 

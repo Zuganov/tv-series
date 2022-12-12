@@ -1,7 +1,7 @@
 import { Image } from '@common/design-system/Image'
 import { Text } from '@common/design-system/Text'
 import { IMAGES } from '@common/resources/Images'
-import { SearchContext } from '@screens/SearchScreen/SeachContext'
+import { SearchContext } from '@screens/Search/SeachContext'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 

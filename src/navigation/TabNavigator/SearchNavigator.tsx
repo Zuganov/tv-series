@@ -1,9 +1,9 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Colors } from '@common/resources/Colors'
-import { SearchScreen } from '@screens/SearchScreen'
-import { ShowScreen } from '@screens/ShowScreen'
-import { EpisodeScreen } from '@screens/EpisodeScreen'
+import { SearchScreen } from '@screens/Search'
+import { ShowScreen } from '@screens/Show'
+import { EpisodeScreen } from '@screens/Episode'
 
 export type SearchStackParamsList = {
   Search: undefined

@@ -1,7 +1,7 @@
 import { TextInput } from '@common/design-system/TextInput'
 import { Colors } from '@common/resources/Colors'
 import { Icons } from '@common/resources/Icons'
-import { SearchContext } from '@screens/SearchScreen/SeachContext'
+import { SearchContext } from '@screens/Search/SeachContext'
 import React, { useEffect } from 'react'
 import { Keyboard, StyleSheet } from 'react-native'
 

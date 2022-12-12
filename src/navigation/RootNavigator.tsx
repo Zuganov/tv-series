@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { TabNavigator, TabNavigatorParamsList } from '@navigation/TabNavigator'
-import { NoInternetScreen } from '@screens/NoInternetScreen'
+import { NoInternetScreen } from '@screens/NoInternet'
 import { InternetStatusContext } from '@common/contexts/InternetStatusContext'
 import { NavigatorScreenParams } from '@react-navigation/core'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'

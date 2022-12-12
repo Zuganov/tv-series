@@ -1,9 +1,9 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { FavoritesScreen } from '@screens/FavoritesScreen'
+import { FavoritesScreen } from '@screens/Favorites'
 import { Colors } from '@common/resources/Colors'
-import { ShowScreen } from '@screens/ShowScreen'
-import { EpisodeScreen } from '@screens/EpisodeScreen'
+import { ShowScreen } from '@screens/Show'
+import { EpisodeScreen } from '@screens/Episode'
 
 export type FavoritesStackParamsList = {
   Favorites: undefined
